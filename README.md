@@ -1,2 +1,2 @@
 # PythonScripting
-Python scripting for automation
+✔ Python scripting for automation

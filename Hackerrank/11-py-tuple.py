@@ -24,6 +24,7 @@ Sample Input 0
 Sample Output 0
 
 3713081631934410656
+hash func ref - https://docs.python.org/3/reference/datamodel.html#object.__hash__
 '''
 if __name__ == '__main__':
     n = int(input())

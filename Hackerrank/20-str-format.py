@@ -33,3 +33,19 @@ Sample Output
    17    21    11 10001
 
 '''
+
+def print_formatted(number):
+    # your code goes here
+    i = 1
+    for i in range(1,n+1):
+        octV = str(oct(i))
+        octVFormat = octV[2:]
+        hexV = str(hex(i)).upper()
+        hexVFormat = hexV[2:]
+        binX = str(bin(i))
+        binXFormat = binX[2:]
+        print(str(i)+'  '+octVFormat+'  '+hexVFormat+'  '+binXFormat)
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)

@@ -10,6 +10,7 @@ CDC
 Sample Output
 
 2
+Note - ths program can be simplified and optimized
 '''
 def count_substring(string, sub_string):
     lSub = len(sub_string)

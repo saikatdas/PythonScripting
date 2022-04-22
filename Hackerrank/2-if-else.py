@@ -9,15 +9,8 @@ If n is even and greater than 20, print Not Weird
 '''
 #!/bin/python3
 
-import math
-import os
-import random
-import re
-import sys
-
-
-
 if __name__ == '__main__':
+    print('Enter any number :')
     N = int(input())
     if(N%2!=0):
         print("Weird")

@@ -1,4 +1,4 @@
-    """
+"""
         Consider a list (list = []). You can perform the following commands:
 
 insert i e: Insert integer e at position i .
@@ -36,6 +36,7 @@ O/P -
 [9, 5, 1]
 list.sort(key=lambda s: s.name, reverse=True)
 """
+
 if __name__ == '__main__':
     N = int(input())
     arr = []

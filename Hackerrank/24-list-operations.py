@@ -34,7 +34,7 @@ O/P -
 [6, 5, 10]
 [1, 5, 9, 10]
 [9, 5, 1]
-
+list.sort(key=lambda s: s.name, reverse=True)
 """
 if __name__ == '__main__':
     N = int(input())

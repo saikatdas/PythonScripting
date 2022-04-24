@@ -20,17 +20,27 @@ Sample Output
    14    16     E  1110
    15    17     F  1111
    16    20    10 10000
-   17    21    11 10001    
+   17    21    11 10001
+
+   n = int(raw_input())
+spacing = len(bin(n)[2:])
+
+for i in range(1,n+1):
+    print str(i).rjust(spacing, ' '),str(oct(i)[1:]).rjust(spacing, ' '),str(hex(i)[2:].upper()).rjust(spacing, ' '),str(bin(i)[2:]).rjust(spacing, ' ')
+
+
+  https://www.w3schools.com/python/ref_string_format.asp
+
 """
 
 def print_formatted(number):
     # your code goes here
     
     for i in range(1,number+1):
-        d = str(i)
-        o = oct(i)[2:]
-        X = hex(i)[2:].upper()
-        b = bin(i)[2:]
+        # d = str(i)
+        # o = oct(i)[2:]
+        # X = hex(i)[2:].upper()
+        # b = bin(i)[2:]
         width = len("{0:b}".format(n)) #max binary digits
         print("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(i, width=width))
      

@@ -1,4 +1,5 @@
 #Replace all ______ with rjust, ljust or center.
+# str.center(40, '#'))
 
 thickness = int(input()) #This must be an odd number
 c = 'H'

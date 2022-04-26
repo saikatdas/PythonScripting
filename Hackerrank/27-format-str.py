@@ -43,7 +43,7 @@ def print_formatted(number):
         # b = bin(i)[2:]
         width = len("{0:b}".format(n)) #max binary digits
         print("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(i, width=width))
-     
+        print('hi')
 
 if __name__ == '__main__':
     n = int(input())

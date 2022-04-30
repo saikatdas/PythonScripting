@@ -53,28 +53,17 @@ if __name__ == '__main__':
     
     customer = int(input())
     
-    for c in range(customer):
+    shoeStockCounter = Counter(shoeStock) #LIST WITH TUPLE [(1,3), (2,4)]
 
-        shoeSize , price = map(int , input().split())
+    for i in range(customer):
 
-        if shoeSize in shoeStock:
-            sum += price
-            shoeStock[shoeSize] -=1
-            # shoeStock.remove(shoeSize)
+        size , price = map(int , input().split())
+
+        if shoeStockCounter[size]:
+             sum += price
+             shoeStockCounter[size] -= 1
     print(sum)
-    # shoeStockCounter = Counter(shoeStock).items() #LIST WITH TUPLE [(1,3), (2,4)]
 
-    # noOfCustomer = int(input())
-    # modifiedShoeStock = []
-    # for i in range(noOfCustomer):
-    #      a = input().split()
-    #      size = int(a[0])
-    #      price = int(a[1])
-
-    #      if size in Counter(shoeStock).keys():
-
-    #          for shoe in range(shoeStockCounter):
-    #             y = list(shoe)
 
 
 

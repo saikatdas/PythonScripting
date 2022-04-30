@@ -1,7 +1,23 @@
 """
     Counter is a subclass of dict that’s specially designed for counting hashable objects in Python. It’s a dictionary that stores objects as keys and counts as values. To count with Counter, you typically provide a sequence or iterable of hashable objects as an argument to the class’s constructor.
 
-Counter internally iterates through the input sequence, counts the number of times a given object occurs, and stores objects as keys and the counts as values. In the next section, you’ll learn about different ways to construct counters.
+    ßCounter internally iterates through the input sequence, counts the number of times a given object occurs, and stores objects as keys and the counts as values. In the next section, you’ll learn about different ways to construct counters.
+
+    Ex - Counter("mississippi")
+    Counter({'i': 4, 's': 4, 'p': 2, 'm': 1})
+
+    myList = [1,1,2,3,4,5,3,2,3,4,2,1,2,3]
+     print Counter(myList)
+    Counter({2: 4, 3: 4, 1: 3, 4: 2, 5: 1})
+
+    print Counter(myList).items()
+    [(1, 3), (2, 4), (3, 4), (4, 2), (5, 1)]
+
+     print Counter(myList).keys()
+    [1, 2, 3, 4, 5]
+
+    print Counter(myList).values()
+    [3, 4, 4, 2, 1]
 
     Without the counter function
 

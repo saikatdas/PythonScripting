@@ -1,4 +1,6 @@
 """
+https://www.w3schools.com/python/python_ref_set.asp
+
 Check if A is a subset of B.
 Sample Input
 

@@ -1,11 +1,27 @@
 """
->>> from collections import namedtuple
->>> Car = namedtuple('Car','Price Mileage Colour Class')
->>> xyz = Car(Price = 100000, Mileage = 30, Colour = 'Cyan', Class = 'Y')
->>> print xyz
-Car(Price=100000, Mileage=30, Colour='Cyan', Class='Y')
->>> print xyz.Class
-Y
+----------------------------------------------------------------
+# Python code to demonstrate namedtuple() and
+# _fields and _replace()
+
+# importing "collections" for namedtuple()
+import collections
+
+# Declaring namedtuple()
+Student = collections.namedtuple('Student', ['name', 'age', 'DOB'])
+
+# Adding values
+S = Student('Nandini', '19', '2541997')
+
+# using _fields to display all the keynames of namedtuple()
+print("All the fields of students are : ")
+print(S._fields)
+
+# ._replace returns a new namedtuple, it does not modify the original
+print("returns a new namedtuple : ")
+print(S._replace(name='Manjeet'))
+# original namedtuple
+print(S)
+----------------------------------------------------------------
 
 Note:
 1. Columns can be in any order. IDs, marks, class and name can be written in any order in the spreadsheet.

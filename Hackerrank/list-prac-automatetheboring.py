@@ -1,0 +1,3 @@
+"""
+automate th boring stuff 
+"""

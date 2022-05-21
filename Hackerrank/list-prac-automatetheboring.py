@@ -58,4 +58,40 @@ l.reverse()
 
 But lists and strings are different in an important way. A list value is a mutable data type: it can have values added, removed, or changed. However, a string is immutable: it cannot be changed. Trying to reassign a single character in a string results in a TypeError error, as you can see by entering the following into the interactive shell:
 
+Tuples are like strings , immutable in nature
+id(var) is same like &var
+
+del(spam[0]) and spam.remove('cat')
+
+use del statement when you know the list index for deleting item
+use remove statement when you know the value of the element to be deleted.
+
+
+
+Here's a little demonstration:
+
+import copy
+
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [a, b]
+Using normal assignment operatings to copy:
+
+d = c
+
+print id(c) == id(d)          # True - d is the same object as c
+print id(c[0]) == id(d[0])    # True - d[0] is the same object as c[0]
+Using a shallow copy:
+
+d = copy.copy(c)
+
+print id(c) == id(d)          # False - d is now a new object
+print id(c[0]) == id(d[0])    # True - d[0] is the same object as c[0]
+Using a deep copy:
+
+d = copy.deepcopy(c)
+
+print id(c) == id(d)          # False - d is now a new object
+print id(c[0]) == id(d[0])    # False - d[0] is now a new object
+
 """

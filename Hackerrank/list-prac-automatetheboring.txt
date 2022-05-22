@@ -164,6 +164,36 @@ for experimentNumber in range(100000):
 
 print('Chance of streak: %s%%' % (numberOfStreaks / (100*10000)))
 
+
+
+Grid -
+
+print below grid in this format -
+
+..OO.OO..
+.OOOOOOO.
+.OOOOOOO.
+..OOOOO..
+...OOO...
+....O....
+
+This is nothing but transpose of matrix row--> col and col-->row
+
+
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
+for i in range(len(grid[0])):
+    for j in range(len(grid)):
+            print(grid[j][i],end='')
+    print()
+
 """
 
 

@@ -94,4 +94,9 @@ d = copy.deepcopy(c)
 print id(c) == id(d)          # False - d is now a new object
 print id(c[0]) == id(d[0])    # False - d[0] is now a new object
 
+
+Variables will contain references to list values rather than list values themselves. But for strings and integer values, variables simply contain the string or integer value. Python uses references whenever variables must store values of mutable data types, such as lists or dictionaries. For values of immutable data types such as strings, integers, or tuples, Python variables will store the value itself.
+
+Although Python variables technically contain references to list or dictionary values, people often casually say that the variable contains the list or dictionary.
+
 """

@@ -194,6 +194,70 @@ for i in range(len(grid[0])):
             print(grid[j][i],end='')
     print()
 
+----------------------------------------------------------------
+                            DICTIONARY
+----------------------------------------------------------------
+
+Dictionaries vs. Lists
+Unlike lists, items in dictionaries are unordered. The first item in a list named spam would be spam[0]. But there is no “first” item in a dictionary. While the order of items matters for determining whether two lists are the same, it does not matter in what order the key-value pairs are typed in a dictionary. Enter the following into the interactive shell:
+
+>>> spam = ['cats', 'dogs', 'moose']
+>>> bacon = ['dogs', 'moose', 'cats']
+>>> spam == bacon
+False
+>>> eggs = {'name': 'Zophie', 'species': 'cat', 'age': '8'}
+>>> ham = {'species': 'cat', 'age': '8', 'name': 'Zophie'}
+>>> eggs == ham
+True
+
+Though dictionaries are not ordered, the fact that you can have arbitrary values for the keys allows you to organize your data in powerful ways. Say you wanted your program to store data about your friends’ birthdays. You can use a dictionary with the names as keys and the birthdays as values. Open a new file editor window and enter the following code. Save it as birthdays.py.
+
+➊ birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+
+   while True:
+       print('Enter a name: (blank to quit)')
+       name = input()
+       if name == '':
+           break
+
+    ➋ if name in birthdays:
+        ➌ print(birthdays[name] + ' is the birthday of ' + name)
+       else:
+           print('I do not have birthday information for ' + name)
+           print('What is their birthday?')
+           bday = input()
+        ➍ birthdays[name] = bday
+           print('Birthday database updated.')
+
+The get() Method
+It’s tedious to check whether a key exists in a dictionary before accessing that key’s value. Fortunately, dictionaries have a get() method that takes two arguments: the key of the value to retrieve and a fallback value to return if that key does not exist.
+
+Enter the following into the interactive shell:
+
+>>> picnicItems = {'apples': 5, 'cups': 2}
+>>> 'I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.'
+'I am bringing 2 cups.'
+>>> 'I am bringing ' + str(picnicItems.get('eggs', 0)) + ' eggs.'
+'I am bringing 0 eggs.'
+
+
+spam = {'name': 'Pooka', 'age': 5}
+if 'color' not in spam:
+    spam['color'] = 'black'
+
+The setdefault() method offers a way to do this in one line of code. The first argument passed to the method is the key to check for, and the second argument is the value to set at that key if the key does not exist. If the key does exist, the setdefault() method returns the key’s value. Enter the following into the interactive shell:
+
+>>> spam = {'name': 'Pooka', 'age': 5}
+>>> spam.setdefault('color', 'black')
+'black'
+>>> spam
+{'color': 'black', 'age': 5, 'name': 'Pooka'}
+>>> spam.setdefault('color', 'white')
+'black'
+>>> spam
+{'color': 'black', 'age': 5, 'name': 'Pooka'}
+
+
 """
 
 

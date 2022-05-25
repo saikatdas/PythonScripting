@@ -21,13 +21,35 @@ Sample Output 0
 25200
 88200
 
+                   
 
+>>> datetime.date.today()
+datetime.date(2022, 5, 24)
+>>> d = datetime.date.today()
+>>> d
+datetime.date(2022, 5, 24)
+>>> import datetime
+>>> d = datetime.date.today()
+>>> d
+datetime.date(2022, 5, 24)
+>>> m = datetime.date(1992, 5, 24)
+>>> d-m
+datetime.timedelta(days=10957)
+>>> (d-m)/365
+datetime.timedelta(days=30, seconds=1656, microseconds=986301)
+>>> (d-m) // 365
+datetime.timedelta(days=30, seconds=1656, microseconds=986301)
+>>> 10957 // 365
+30
+
+today = datetime.date.today()
+df = today.strftime('%Y-%b-%d')               
 """
 from datetime import datetime as dt
 
-#s = 'Sun 10 May 2015 13:54:36 -0700'
-#Day dd Mon yyyy hh:mm:ss +xxxx
-fmt = '%a %d %b %Y %H:%M:%S %z'
+#s = '10 May 2015'
+# dd Mon yyyy 
+fmt = '%d %b %Y'
 for i in range(int(input())):
     print(int(abs((dt.strptime(input(), fmt) -
                    dt.strptime(input(), fmt)).total_seconds())))

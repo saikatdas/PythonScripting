@@ -10,6 +10,8 @@ True
 use eval : eval needs a variable named x to be defined
 If you don't have a variable named x , you will get an error
 
+https://stackoverflow.com/questions/494594/how-to-write-the-fibonacci-sequence
+
 """
 
 if __name__ == '__main__':

@@ -41,6 +41,15 @@ Explanation
 
 .. is the first repeating character, but it is not alphanumeric.
 1 is the first (from left to right) alphanumeric repeating character of the string in the substring 111.
+
+match() -------- > >> Determine if the RE matches at the beginning of the string.
+
+search() ---------> >> Scan through a string, looking for any location where this RE matches.
+
+findall() ---- ----->>> Find all substrings where the RE matches, and returns them as a list.
+
+finditer()----->>> Find all substrings where the RE matches, and returns them as an iterator.
+
 """
 
 import re

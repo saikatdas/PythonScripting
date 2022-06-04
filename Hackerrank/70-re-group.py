@@ -30,4 +30,20 @@ Code
 >>> m = re.match(r'(?P<user>\w+)@(?P<website>\w+)\.(?P<extension>\w+)','myname@hackerrank.com')
 >>> m.groupdict()
 {'website': 'hackerrank', 'user': 'myname', 'extension': 'com'}
+
+Sample Input
+
+..12345678910111213141516171820212223
+Sample Output
+
+1
+Explanation
+
+.. is the first repeating character, but it is not alphanumeric.
+1 is the first (from left to right) alphanumeric repeating character of the string in the substring 111.
 """
+
+import re
+if __name__ == '__main__':
+    m = re.search(r'([a-zA-Z0-9])\1+',input())
+    print(m.group(1) if m else -1)

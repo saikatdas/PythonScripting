@@ -50,6 +50,14 @@ findall() ---- ----->>> Find all substrings where the RE matches, and returns th
 
 finditer()----->>> Find all substrings where the RE matches, and returns them as an iterator.
 
+https://swtch.com/~rsc/regexp/regexp1.html
+
+>>> m = re.findall(r'([a-zA-Z0-9])\1+',input())
+>>> m
+['m', 'a', 'r']
+>>> s.index('a')
+
+we can use above concept to find duplicates
 """
 
 import re

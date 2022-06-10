@@ -44,9 +44,13 @@ Invalid
 
 ^[456]((\d)\2{3,})$|(([\d]{4}-[\d]{4}-[\d]{4}-[\d]{4}))
 
+https://www.linkedin.com/jobs/search/?f_WT=2&geoId=104738515&keywords=cloud&location=Ireland
 
+https://www.linkedin.com/jobs/search/?geoId=104738515&keywords=cloud&location=Ireland
 
 [456]((\d)\2{3,})$|(([\d]{4}-[\d]{4}-[\d]{4}-[\d]{4}))
 
 try and test today
+https://dev.to/awwsmm/20-small-steps-to-become-a-regex-master-mpc
+mastering regex
 """

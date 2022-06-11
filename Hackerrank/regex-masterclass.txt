@@ -1,0 +1,7 @@
+Regular expressions are used to find patterns in text. That's it. The pattern might be something as simple as the word "dog" in this sentence:
+
+Test Regex here: https://regex101.com/
+
+Text - The quick brown fox jumps over the lazy dog.
+
+Pattern- dog (Find dog in a sentence) 

@@ -9,3 +9,12 @@ Pattern- dog (Find dog in a sentence)
 Find all words in a sentence that contains the letter "o"
 
 Pattern - \w*o\w*  (so \w means all letters between a-z and * means the resulting RE to match 0 or more repetitions of the preceding RE, as many repetitions as are possible. ab* will match ‘a’, ‘ab’, or ‘a’ followed by any number of ‘b’s.)
+
+pattern: cat
+string:  The cat was cut when it ran under the car.
+matches:     ---
+
+pattern: ca[rt]
+string:  The cat was cut when it ran under the car.
+             ---                               ----
+Above will look for car and cat because rt is inside [] third bracket

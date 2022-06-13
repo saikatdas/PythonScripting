@@ -18,3 +18,7 @@ pattern: ca[rt]
 string:  The cat was cut when it ran under the car.
              ---                               ----
 Above will look for car and cat because rt is inside [] third bracket
+
+Task - Jim, where Bill had had "had", had had "had had". "Had had" had been correct.
+Match all had in the above paragraph
+Pattern - Hh[ad]

@@ -22,3 +22,7 @@ Above will look for car and cat because rt is inside [] third bracket
 Task - Jim, where Bill had had "had", had had "had had". "Had had" had been correct.
 Match all had in the above paragraph
 Pattern - Hh[ad]
+
+Task - A bat, a cat, and a rat walked into a bar...
+Match all the animals
+Pattern - [bcr]at   or bat|cat|rat

@@ -26,3 +26,30 @@ Pattern - Hh[ad]
 Task - A bat, a cat, and a rat walked into a bar...
 Match all the animals
 Pattern - [bcr]at   or bat|cat|rat
+
+#ESCAPE SEQUENCE
+you can't match special characters
+Task - You can't match [] using regex! You will regret this!
+Do - Try to match third brackets i.e. []
+Regex = \[\]
+
+pattern: \\
+string:  C:\Users\Tanja\Pictures\Dogs
+matches:   ^     ^     ^        ^
+t   t   t   t
+
+Pattern: \\\[\\]
+String: ...match this regex `\[\]` with a regex?
+
+Pattern: \\[rtn] or \\r|\\t|\\n
+String: `\r`, `\t`, and `\n` are all regex escape sequences.
+
+Pattern: \\.
+String: Hi Walmart is my grandson there his name is "\n \r \t".
+
+Task: Match all dots
+Pattern: [.] or try \.
+String:War is Peace. Freedom is Slavery. Ignorance is Strength.
+
+
+

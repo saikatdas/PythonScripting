@@ -51,5 +51,41 @@ Task: Match all dots
 Pattern: [.] or try \.
 String:War is Peace. Freedom is Slavery. Ignorance is Strength.
 
+Character ranges work the way you might expect, given the example above.
+Put the first and last letters you want to match in the square brackets, with a hyphen in between them. If you only want to match the letters a through m, for instance, you could do:
+pattern: \\[a-m]
+string:  `\n`, `\r`, `\t`, and `\f` are whitespace characters, `\.`, `\\` and `\[` are not.
+matches:
+
+Hexadecimal numbers can contain digits 0-9 as well as letters A-F.
+When used to specify colours, "hex" codes can be as short as three characters.
+Create a regex to find valid hex codes in the list below:
+
+Pattern: [A-F0-9]{3}|[0-9]{3} or try this- [0-9A-F][0-9A-F][0-9A-F]
+String :  1H8 4E2 8FF 0P1 T8B 776 42B G12
+
+Using character ranges, create a regex that will select only the
+lowercase consonants (non-vowel characters, including y)
+in the sentence below:
+
+pattern:  [b-df-hj-np-tv-z] or [^aeiou]
+string:  The walls in the mall are totally, totally tall.
+
+pattern: [^aeiou .,T]
+string:  The walls in the mall are totally, totally tall.
+
+find all the years between 1977 and 1982 (inclusive) below:
+pattern: 19[78][^3-6]
+string:  1975 1976 1977 1978 1979 1980 1981 1982 1983 1984
+
+Write a regex to match all characters below that aren't a literal carat ^ character:
+
+pattern: [^\\^] or [^^]
+string:  abc1^23*()
+
+class	characters
+\d	"digits" [0-9]
+\w	"word characters" [A-Za-z0-9_]
+\s	"whitespace" [ \t\r\n\f]
 
 

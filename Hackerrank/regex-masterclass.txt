@@ -88,4 +88,38 @@ class	characters
 \w	"word characters" [A-Za-z0-9_]
 \s	"whitespace" [ \t\r\n\f]
 
+pattern: \\[a-z] or \\\w
+string:  `\n`, `\r`, `\t`, and `\f` are whitespace characters, `\.
 
+
+must start with a letter a-zA-Z, a dollar sign $, or an underscore _.
+The remainder of the characters must be word characters \w.
+
+Pattern: [a-zA-Z_$]\w{2}
+String: __e $12 .x2 foo Bar 3mm
+
+
+United States Social Security Numbers (SSNs) are 9-digit numbers in the format XXX-XX-XXXX,
+where each X can be any digit [0-9]. Using one or more character classes,
+write a regex to find the properly-formatted SSNs in the list below:
+
+pattern: \d{3}-\d{2}-\d{4}
+string:  113-25=1902 182-82-0192 H23-_3-9982 1I1-O0-E38B
+
+
+Match all of the English words in the passage below.
+pattern: [a-z]+
+string:  3 plus 3 is six but 4 plus three is 7
+
+Select only decimal point data with KB,MB,GB,TB
+Pattern: (\d+.)(\d)(KB|MB|GB|TB)
+String: 11TB 13 14.4MB 22HB 9.9GB TB 0KB
+
+Now select only int data with KB,MB,GB,TB
+Pattern: (\d)(KB|MB|GB|TB)
+String: 11TB 13 14.4MB 22HB 9.9GB TB 0KB
+
+Now select decimal or int data with KB,MB,GB,TB
+Pattern: (\d)(KB|MB|GB|TB)|(\d+.)(\d)(KB|MB|GB|TB) or we can simplify  (\d*.\d)(KB|MB|GB|TB)
+Or (\d+\.*\d*)(KB|MB|GB|TB)  or (\d+\.*\d*)[KMGT]B or \d+\.*\d*[KMGT]B
+String: 11TB 13 14.4MB 22HB 9.9GB TB 0KB

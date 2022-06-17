@@ -123,3 +123,8 @@ Now select decimal or int data with KB,MB,GB,TB
 Pattern: (\d)(KB|MB|GB|TB)|(\d+.)(\d)(KB|MB|GB|TB) or we can simplify  (\d*.\d)(KB|MB|GB|TB)
 Or (\d+\.*\d*)(KB|MB|GB|TB)  or (\d+\.*\d*)[KMGT]B or \d+\.*\d*[KMGT]B
 String: 11TB 13 14.4MB 22HB 9.9GB TB 0KB
+
+Pattern: \d+\.?\d*[KMGT]B
+String: 1..3KB 5...GB ..6TB
+lesson - ? matches the previous token between zero and one times,
+as many times as possible, giving back as needed (greedy)

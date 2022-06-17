@@ -128,3 +128,15 @@ Pattern: \d+\.?\d*[KMGT]B
 String: 1..3KB 5...GB ..6TB
 lesson - ? matches the previous token between zero and one times,
 as many times as possible, giving back as needed (greedy)
+
+
+Task - In some programming languages (like Java), "long integers" and floating-point numbers
+can be followed by l/L and f/F to indicate that they should be treated
+as longs / floats (respectively) rather than the usual ints / doubles.
+Find all of the valid longs in the line below:
+
+Pattern - \d+[lL]?
+
+match 0. and all
+Pattern: \d*\.+\d+|[\d]\.
+String: 0.011 .2 42 2.0 3.33 4.000 5 6 7.89012 0. .

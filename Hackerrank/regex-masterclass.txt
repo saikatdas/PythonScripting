@@ -143,3 +143,11 @@ match 0. and all
 Pattern: \d*\.+\d+|[\d]\.
 String: 0.011 .2 42 2.0 3.33 4.000 5 6 7.89012 0. .
 
+
+pattern: ([A-Z])|([a-z])
+string:  The current President of Bolivia is Evo Morales.
+
+The above regex defines two capturing groups, which are indexed starting from 1.
+The first capturing group matches any single uppercase letter, and the second capturing group matches any single lowercase letter.
+ Using the "or" pipe | and the "capturing group" parentheses ()
+we can define a single regular expression which matches multiple kinds of strings.

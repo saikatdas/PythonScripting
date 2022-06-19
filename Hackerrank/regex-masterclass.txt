@@ -151,3 +151,9 @@ The above regex defines two capturing groups, which are indexed starting from 1.
 The first capturing group matches any single uppercase letter, and the second capturing group matches any single lowercase letter.
  Using the "or" pipe | and the "capturing group" parentheses ()
 we can define a single regular expression which matches multiple kinds of strings.
+
+
+Match all l and F
+
+Pattern:(\d+[lL])|(\d?\.?\d[fF]) <---(My approch)  | suggested answer - (\d*\.\d+[fF]|\d+\.\d*[fF]|\d+[fF])|(\d+[lL])
+String: 42L 12 x 3.4f 6l 3.3 0F L F .2F 0.

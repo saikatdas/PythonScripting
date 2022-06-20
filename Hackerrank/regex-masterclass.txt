@@ -157,3 +157,8 @@ Match all l and F
 
 Pattern:(\d+[lL])|(\d?\.?\d[fF]) <---(My approch)  | suggested answer - (\d*\.\d+[fF]|\d+\.\d*[fF]|\d+[fF])|(\d+[lL])
 String: 42L 12 x 3.4f 6l 3.3 0F L F .2F 0.
+
+Task - Add two more capturing groups to the above regex so that it also categorises numbers as double or int.
+
+Pattern: (\d+[lL])|(\d?\.?\d[fF]?) or (\d*\.\d+[fF]|\d+\.\d*[fF]|\d+[fF])|(\d*\.\d+|\d+\.\d*)|(\d+[lL])|(\d+)
+String: 42L 12 x 3.4f 6l 3.3 0F L F .2F 0.

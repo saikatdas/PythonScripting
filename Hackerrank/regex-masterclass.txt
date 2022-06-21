@@ -174,3 +174,13 @@ and "illegal to drink in the U.S." (< 21) groups:
 Task -  surnames with fewer than 4 characters and surnames with 4 or more characters
 Pattern: ([A-Z][a-z]?[a-z]?)|([A-Z][a-z][a-z][a-z]+)
 String:Kim Jobs Xu Cloyd Mohr Ngo Rock
+
+
+
+pattern: ([^aeiou ]\w*)|(\w+)
+string:  pds6f uub 24r2gp ewqrty l ui_op
+
+"More specific" almost always means "longer".
+Suppose we want to capture two kinds of "words": those that begin with vowels (more specific) vs.
+ those that don't (any other word). How could we write a regex to capture and identify strings that match those two groups?
+ (Groups below are lettered rather than numbered.

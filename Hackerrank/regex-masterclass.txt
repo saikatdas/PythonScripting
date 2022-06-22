@@ -205,3 +205,7 @@ Many regex engines provide the "word boundary" escape sequence \b. \b is a zero-
 Matching on a word boundary means that the character immediately before or immediately after the \b sequence must be a non-word character. But we don't actually include that character in our captured string. To see how this works, let's look at a small example:
 pattern: \b[^ ]+\b
 string:  Ve still vant ze money, Lebowski.
+
+By placing word boundaries "inside" the quotes ("\b...\b"), we're effectively saying that the first and last characters of the matched passwords must be "word" characters. So this works fine here, but won't work as nicely if the first or last character of a user's password is not a word character:
+pattern: \"\b[^"]{0,5}\b\"|\"\b[^"]+\s[^"]*\b\"
+string:  "thefollowingpasswordistooshort" "C++"

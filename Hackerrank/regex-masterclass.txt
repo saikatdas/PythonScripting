@@ -184,3 +184,24 @@ string:  pds6f uub 24r2gp ewqrty l ui_op
 Suppose we want to capture two kinds of "words": those that begin with vowels (more specific) vs.
  those that don't (any other word). How could we write a regex to capture and identify strings that match those two groups?
  (Groups below are lettered rather than numbered.
+
+
+
+pattern: good pass - \(\S{6,12}?\)  bad pass -
+string:  (12345) (my password) (Xanadu.2112) (su_do) (OfSalesmen!)
+
+
+Suppose a password strength verification system on a website requires
+user passwords to be between 6 and 12 non-whitespace characters.
+Write a regex that flags bad passwords in the list below.
+Each password is contained within parentheses () for easy regexing, so make sure your regex starts and
+ends with literal ( and ) characters. (Hint: make sure you disallow literal parentheses in the passwords
+with [^()] or similar, otherwise you might end up matching the entire line!)
+
+
+
+Many regex engines provide the "word boundary" escape sequence \b. \b is a zero-width escape sequence which matches, funnily enough, the boundary of a word. Remember that when we say "word", we mean any sequence of characters in the class \w, aka. [a-zA-Z0-9_].
+
+Matching on a word boundary means that the character immediately before or immediately after the \b sequence must be a non-word character. But we don't actually include that character in our captured string. To see how this works, let's look at a small example:
+pattern: \b[^ ]+\b
+string:  Ve still vant ze money, Lebowski.

@@ -218,3 +218,14 @@ Pattern: \w{4}|\w{1,3}  or \w{4}|\w+
 String: Kim Jobs Xu Cloyd Mohr Ngo Rock
 Since the first capturing group matches all surnames with four or more characters, we could even change the second capturing group to just \w+, since this would capture
 all remaining surnames (those with 1, 2, or 3 characters):
+
+
+Pattern: \([^()]{0,5}\)|\([^()]+\s[^()]*\)
+String : (12345) (my password) (Xanadu.2112) (su_do) (OfSalesmen!)
+
+Task: Suppose a password strength verification system on a website requires
+user passwords to be between 6 and 12 non-whitespace characters. Write
+a regex that flags bad passwords in the list below. Each password is contained
+within parentheses () for easy regexing, so make sure your regex starts and ends with
+literal ( and ) characters. (Hint: make sure you disallow literal parentheses in the passwords with [^()] or similar,
+ otherwise you might end up matching the entire line!)

@@ -229,3 +229,10 @@ a regex that flags bad passwords in the list below. Each password is contained
 within parentheses () for easy regexing, so make sure your regex starts and ends with
 literal ( and ) characters. (Hint: make sure you disallow literal parentheses in the passwords with [^()] or similar,
  otherwise you might end up matching the entire line!)
+
+
+
+Pattern: \"[\w.!]{6,12}+\" and bad pass - \"\b[^\"]{0,5}\b\"|\"\b[^\"]+\s[^"]*\b\"
+String : "12345" "my password" "Xanadu.2112" "su_do" "OfSalesmen!"
+Task: Highlight good password. A good password is between 6 and 12 non-whitespace characters
+

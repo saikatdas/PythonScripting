@@ -209,3 +209,12 @@ string:  Ve still vant ze money, Lebowski.
 By placing word boundaries "inside" the quotes ("\b...\b"), we're effectively saying that the first and last characters of the matched passwords must be "word" characters. So this works fine here, but won't work as nicely if the first or last character of a user's password is not a word character:
 pattern: \"\b[^"]{0,5}\b\"|\"\b[^"]+\s[^"]*\b\"
 string:  "thefollowingpasswordistooshort" "C++"
+
+{X}   // match exactly X times
+{X,}  // match >= X times
+{X,Y} // match >= X and <= Y times
+
+Pattern: \w{4}|\w{1,3}  or \w{4}|\w+
+String: Kim Jobs Xu Cloyd Mohr Ngo Rock
+Since the first capturing group matches all surnames with four or more characters, we could even change the second capturing group to just \w+, since this would capture
+all remaining surnames (those with 1, 2, or 3 characters):

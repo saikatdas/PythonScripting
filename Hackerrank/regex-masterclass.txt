@@ -248,3 +248,8 @@ the end of a word (or by themselves entirely). Suppose we are
 writing a syntax highlighter and we want to highlight the word var, but
 only when it appears on its own (not touching any other word characters).
  Can you write a regex to do that?
+
+
+ Pattern: ^start|end$
+ String: start end start end start end start end
+ Task : start a string with start and end it with end

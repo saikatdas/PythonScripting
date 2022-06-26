@@ -238,7 +238,8 @@ Task: Highlight good password. A good password is between 6 and 12 non-whitespac
 
 
 
-
+pattern:  \bvar\b
+string:  var varx _var (var j) barvarcar *var var-> {var}
 
 Task: Word boundaries are useful in syntax highlighting engines,
 where we want to match on a particular sequence of characters,

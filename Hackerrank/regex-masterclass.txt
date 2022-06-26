@@ -236,3 +236,14 @@ Pattern: \"[\w.!]{6,12}+\" and bad pass - \"\b[^\"]{0,5}\b\"|\"\b[^\"]+\s[^"]*\b
 String : "12345" "my password" "Xanadu.2112" "su_do" "OfSalesmen!"
 Task: Highlight good password. A good password is between 6 and 12 non-whitespace characters
 
+
+
+
+
+Task: Word boundaries are useful in syntax highlighting engines,
+where we want to match on a particular sequence of characters,
+but we want to ensure that they only occur at the beginning or
+the end of a word (or by themselves entirely). Suppose we are
+writing a syntax highlighter and we want to highlight the word var, but
+only when it appears on its own (not touching any other word characters).
+ Can you write a regex to do that?

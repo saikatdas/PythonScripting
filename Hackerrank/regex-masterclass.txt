@@ -253,3 +253,11 @@ only when it appears on its own (not touching any other word characters).
  Pattern: ^start|end$
  String: start end start end start end start end
  Task : start a string with start and end it with end
+
+
+ Pattern: (^| )(\d+|\d+\.\d+)[KMGT]B
+ String: 6.6KB 1..3KB 12KB 5G 3.3MB KB .6.2TB 9MB
+ Task: In this example, our file sizes are delimited (separated)
+ by space characters ' '. So we want every file size to begin with a
+ digit that's preceded by a
+ space character or the beginning of a line:

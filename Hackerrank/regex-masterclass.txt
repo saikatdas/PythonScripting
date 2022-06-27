@@ -261,3 +261,18 @@ only when it appears on its own (not touching any other word characters).
  by space characters ' '. So we want every file size to begin with a
  digit that's preceded by a
  space character or the beginning of a line:
+
+
+pattern:\s*$
+string:  myvec <- c(1, 2, 3, 4, 5)
+
+ Task:  any whitespace which comes between a non-whitespace character and the end of the line
+
+
+
+Task: non-capturing groups (?:)
+In two examples in the previous Step, we captured text where we really didn't need to.
+In the "file sizes" challenge, we grabbed the space characters before the first digit of the file sizes,
+and in the "CSV" challenge, we captured the commas between each token.
+We don't need to capture these characters, but we do need to use them to structure our regular expression.
+ These are perfect use cases for the non-capturing group, (?:).
